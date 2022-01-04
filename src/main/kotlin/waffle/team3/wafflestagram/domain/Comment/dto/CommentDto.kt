@@ -1,6 +1,5 @@
 package waffle.team3.wafflestagram.domain.Comment.dto
 
-import com.fasterxml.jackson.annotation.JsonProperty
 import waffle.team3.wafflestagram.domain.Comment.model.Comment
 import waffle.team3.wafflestagram.domain.Reply.dto.ReplyDto
 import java.time.LocalDateTime

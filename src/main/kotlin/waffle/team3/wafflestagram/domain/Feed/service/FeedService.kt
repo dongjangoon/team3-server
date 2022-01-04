@@ -33,12 +33,12 @@ class FeedService(
     fun upload(uploadRequest: FeedDto.UploadRequest, user: User): Feed {
         val feed = Feed(content = uploadRequest.content, user = user)
 
-       val userTagList = mutableListOf<UserTag>()
-       for (nickname in uploadRequest.userTags) {
-           val user = userRepository.findByNickname(nickname) ?: throw UserDoesNotExistException("User with this nickname does not exist.")
-           val userTag = UserTag(user = user, feed = feed)
-           userTagList.add(userTag)
-       }
+        val userTagList = mutableListOf<UserTag>()
+        for (nickname in uploadRequest.userTags) {
+            val user = userRepository.findByNickname(nickname) ?: throw UserDoesNotExistException("User with this nickname does not exist.")
+            val userTag = UserTag(user = user, feed = feed)
+            userTagList.add(userTag)
+        }
 
         val tagList = mutableListOf<Tag>()
         for (tag in uploadRequest.tags) {

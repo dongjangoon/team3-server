@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository
 import waffle.team3.wafflestagram.domain.Tag.model.Tag
 
 @Repository
-interface TagRepository: JpaRepository<Tag, Long>{
-}
+interface TagRepository : JpaRepository<Tag, Long>

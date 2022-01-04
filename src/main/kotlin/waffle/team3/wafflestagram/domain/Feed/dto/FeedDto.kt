@@ -24,7 +24,7 @@ class FeedDto {
             id = feed.id,
             content = feed.content,
             comments = feed.comments.let { it.map { comment -> CommentDto.Response(comment) } },
-            tags = feed.tags.let { it.map { tag -> TagDto.Response(tag.content) }},
+            tags = feed.tags.let { it.map { tag -> TagDto.Response(tag.content) } },
             userTags = feed.userTags.let { it.map { userTag -> UserTagDto.Response(userTag.user.nickname) } },
             createdAt = feed.createdAt,
             updatedAt = feed.updatedAt
